@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Glucose Management Indicator (GMI)</h5>
+    @let averageGmi = averageGmi$ | async; @if (averageGmi) {
+    <p class="card-text text-center mt-4">AVERAGE GMI: {{ averageGmi }}%</p>
+    }
+    <ngx-charts-pie-chart [results]="chartData" [legend]="true" [labels]="true">
+    </ngx-charts-pie-chart>
+  </div>
+</div>
